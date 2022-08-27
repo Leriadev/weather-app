@@ -2,7 +2,7 @@
 
 ## Components: 
 
-  :fallen_leaf: City search
+  ### :fallen_leaf: City search
 
   react-select-async-paginate, useState, fetch. [API](https://rapidapi.com/wirefreethought/api/geodb-cities/)
   
@@ -10,7 +10,7 @@
   ![image](https://user-images.githubusercontent.com/94675218/187029362-5ab95fa5-a2a4-418b-95ed-0ff284ca40ed.png)
 
 
-- Current weather (not completed)
+### - Current weather (not completed)
 
 useState, fetch. [API](https://openweathermap.org/current)
 
@@ -18,4 +18,4 @@ useState, fetch. [API](https://openweathermap.org/current)
 
 
 
-- Forcecast
+### - Forcecast
