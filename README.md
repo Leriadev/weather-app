@@ -1,7 +1,9 @@
 Weather app
 
 :fallen_leaf: City search
+
   react-select-async-paginate, useState, fetch. [API](https://rapidapi.com/wirefreethought/api/geodb-cities/)
+  
   ![image](https://user-images.githubusercontent.com/94675218/187029262-31379945-1e3f-48c7-8110-0d316ab1bc49.png)
   ![image](https://user-images.githubusercontent.com/94675218/187029362-5ab95fa5-a2a4-418b-95ed-0ff284ca40ed.png)
 
