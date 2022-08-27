@@ -1,6 +1,6 @@
-#Weather app
+# Weather app
 
-##Components: 
+## Components: 
 
   :fallen_leaf: City search
 
