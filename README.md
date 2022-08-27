@@ -1,6 +1,8 @@
 Weather app
 
-:fallen_leaf: City search
+Components: 
+
+  :fallen_leaf: City search
 
   react-select-async-paginate, useState, fetch. [API](https://rapidapi.com/wirefreethought/api/geodb-cities/)
   
