@@ -1,0 +1,39 @@
+.currentWeather {
+  background-color: azure;
+  margin: 20px auto;
+  padding: 20px 50px 40px 50px;
+  border-radius: 40px;
+  display: grid;
+  grid-template:
+    "c c"
+    "t t"
+    "i d";
+}
+.city {
+  grid-area: "c";
+  margin-bottom: 0;
+}
+.weatherIcon {
+  margin-left: 20px;
+  grid-area: "i";
+}
+img {
+  width: 120px;
+}
+
+.temp {
+  grid-area: "t";
+  font-size: 70px;
+  text-align: right;
+  margin: 0 20% 0 0;
+}
+.currentWeatherDetails {
+  padding: 0;
+  margin: 0;
+  grid-area: "d";
+}
+.weatherDesc{
+    font-size: 20px;
+    margin-top: 50px;
+    height: 100px;
+}

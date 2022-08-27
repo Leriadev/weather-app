@@ -1,6 +1,7 @@
+import style from './Search.module.css'
 import React, { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate";
-import { geoApiOptions, GEO_API_URL } from "../api";
+import { geoApiOptions, GEO_API_URL } from "../../api";
 
 function Search({ onSearchChange }) {
   const [search, setSearch] = useState(null);
@@ -29,7 +30,7 @@ function Search({ onSearchChange }) {
       .catch((err) => console.error(err));
   };
   return (
-    <div>
+    <div className={style.search}>
       <AsyncPaginate
         value={search}
         placeholder="City search.."
