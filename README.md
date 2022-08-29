@@ -11,11 +11,11 @@
   
 
 
-### - Current weather (not completed)
+  ### :fallen_leaf: Current weather
 
 useState, fetch. [OpenWeather API](https://openweathermap.org/current)
 
-![image](https://user-images.githubusercontent.com/94675218/187041135-bbde4840-8fae-4d6d-b2e8-8260fb7ca950.png)
+![image](https://user-images.githubusercontent.com/94675218/187207753-892870eb-b184-441b-a30f-72dcf6ca2338.png)
 
 
 
