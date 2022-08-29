@@ -1,13 +1,20 @@
 body {
   margin: 0;
-  font-family: 'Candara', sans-serif;
+  font-family: "Candara", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: whitesmoke;
   cursor: default;
+  background-image: linear-gradient(135deg, whitesmoke 25%, transparent 25%),
+    linear-gradient(225deg, whitesmoke 25%, transparent 25%),
+    linear-gradient(45deg, whitesmoke 25%, transparent 25%),
+    linear-gradient(315deg, whitesmoke 25%, #eeeff2 25%);
+  background-position: 50px 0, 50px 0, 0 0, 0 0;
+  background-size: 90px 90px;
+  background-repeat: repeat;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
