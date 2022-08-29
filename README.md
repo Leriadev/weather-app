@@ -13,7 +13,7 @@
 
   ### :fallen_leaf: Current weather
 
-useState, fetch. [OpenWeather API](https://openweathermap.org/current)
+useState, fetch, react-moment. [OpenWeather API](https://openweathermap.org/current)
 
 ![image](https://user-images.githubusercontent.com/94675218/187207753-892870eb-b184-441b-a30f-72dcf6ca2338.png)
 
