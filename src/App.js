@@ -7,7 +7,7 @@ import Search from "./components/Search/Search";
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
-  const formatLocalTime = (secs, zone, format = "MMMM Do | [Local time] h:mm a") => {
+  const formatLocalTime = (secs, zone, format) => {
     return moment(secs*1000).utcOffset(zone/3600).format(format)
   }
   const handleOnSearchChange = (searchData) => {
@@ -24,7 +24,11 @@ function App() {
           temp: response.main.temp,
           humidity: response.main.humidity,
           windSpeed: response.wind.speed,
-          localTime: formatLocalTime(response.dt, response.timezone),
+          maxTemp: response.main.temp_max,
+          minTemp: response.main.temp_min,
+          sunrise: formatLocalTime(response.sys.sunrise, response.timezone, "h:mm a"),
+          sunset: formatLocalTime(response.sys.sunset, response.timezone, "h:mm a"),
+          localTime: formatLocalTime(response.dt, response.timezone, "MMMM Do | [Local time] h:mm a"),
           city: searchData.label.split(', ')[0]})
           console.log(response)
         })
