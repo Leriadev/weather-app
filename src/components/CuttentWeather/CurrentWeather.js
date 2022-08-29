@@ -25,10 +25,10 @@ function CurrentWeather( {currentWeather} ) {
         </tbody>
       </table>
       <div className={style.info}>
-        <div className={style.infoCont}><img src="/icons/sunrise.png" /><p> {currentWeather.sunrise}</p></div>
-        <div className={style.infoCont}><img src="/icons/sunset.png" /><p> {currentWeather.sunset}</p></div>
-        <div className={style.infoCont}><img src="/icons/hot.png" /><p>{Math.round(currentWeather.maxTemp)}°C</p></div>
-        <div className={style.infoCont}><img src="/icons/cold.png" /><p>{Math.round(currentWeather.minTemp)}°C</p></div>
+        <div className={style.infoCont}><img src="/icons/sunrise.png" /><p className={style.infoSun}> {currentWeather.sunrise}</p></div>
+        <div className={style.infoCont}><img src="/icons/sunset.png" /><p className={style.infoSun}> {currentWeather.sunset}</p></div>
+        <div className={style.infoCont}><img src="/icons/hot.png" /><p className={style.infoTemp}>{Math.round(currentWeather.maxTemp)}°C</p></div>
+        <div className={style.infoCont}><img src="/icons/cold.png" /><p className={style.infoTemp}>{Math.round(currentWeather.minTemp)}°C</p></div>
       </div>
     </div>
   );

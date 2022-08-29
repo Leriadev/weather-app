@@ -51,11 +51,14 @@ img {
 .info img {
   width: 60px;
 }
-.info p {
-  display: inline;
-  margin-left: 8px;
-}
 .infoCont{
   display: flex;
   align-items: center;
+}
+
+.infoTemp{
+  margin-left: -10px;
+}
+.infoSun{
+  margin-left: 5px;
 }
