@@ -1,6 +1,7 @@
 import moment from "moment";
 import React from "react";
 import style from "./Forecast.module.css";
+import ItemsCarousel from "react-items-carousel";
 import {
   Accordion,
   AccordionItemButton,
@@ -8,19 +9,14 @@ import {
   AccordionItem,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+import { useState } from "react";
 
 function Forecast({ forecast }) {
+  const [activeItemIndex, setActiveItemIndex] = useState(0);
   let currentWeekDay = moment().day();
   let arrWeekFirst = forecast.data.slice(0, currentWeekDay);
   let arrWeekSecond = forecast.data.slice(currentWeekDay + 1);
   const arrWeek = [...arrWeekSecond, ...arrWeekFirst];
-  {
-    arrWeek.map((data, index) => {
-      data.map((item, index) => {
-        console.log(item);
-      });
-    });
-  }
   return (
     <div>
       <Accordion allowZeroExpanded>
@@ -35,39 +31,39 @@ function Forecast({ forecast }) {
                 ))}
               </AccordionItemButton>
             </AccordionItemHeading>
-            {data.map((item, index) => (
-              <AccordionItemPanel key={index}>
-                {item.weather && (
+            <ItemsCarousel
+              requestToChangeActive={setActiveItemIndex}
+              activeItemIndex={activeItemIndex}
+              numberOfCards={3}
+              gutter={20}
+              leftChevron={<button className={style.carouselBtn}>{"<"}</button>}
+              rightChevron={
+                <button className={style.carouselBtn}>{">"}</button>
+              }
+              outsideChevron
+              chevronWidth={40}
+              infiniteLoop={true}
+            >
+              {data.slice(1).map((item, index) => (
+                <AccordionItemPanel key={index}>
                   <div className={style.accordionItemPanel}>
                     <p className={style.accordionItemPanelTime}>
                       {moment(item.dt_txt).format("HH:mm")}
                     </p>
                     <div className={style.accordionItemPanelWeather}>
-                    <img
-                      className={style.accordionItemPanelIcon}
-                      src={`icons/${item.weather[0].icon}.svg`}
-                    />
-                    <p>{item.weather[0].description}</p>
+                      <img
+                        className={style.accordionItemPanelIcon}
+                        src={`icons/${item.weather[0].icon}.svg`}
+                      />
+                      <p>{item.weather[0].description}</p>
                     </div>
                     <p className={style.accordionItemPanelTemp}>
                       {Math.round(item.main.temp)}°C
                     </p>
-                    <div className={style.accordionItemPanelMinmaxTemp}>
-                      <img src = 'icons/cold.png' />
-                      <p className={style.accordionItemPanelTemp_min}>
-                        {Math.round(item.main.temp_min)}°C
-                      </p>
-                    </div>
-                    <div className={style.accordionItemPanelMinmaxTemp}>
-                      <img src = 'icons/hot.png' />
-                      <p className={style.accordionItemPanelTemp_max}>
-                        {Math.round(item.main.temp_max)}°C
-                      </p>
-                    </div>
                   </div>
-                )}
-              </AccordionItemPanel>
-            ))}
+                </AccordionItemPanel>
+              ))}
+            </ItemsCarousel>
           </AccordionItem>
         ))}
       </Accordion>

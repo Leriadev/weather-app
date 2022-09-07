@@ -29,7 +29,6 @@ function App() {
       .format(format);
   };
   const handleOnSearchChange = (searchData) => {
-    // console.log(searchData.value.split(' ')[0], searchData.value.split(' ')[1])
     let coordinates = searchData.value.split(" ");
     let currentWeatherData = fetch(
       `${WEATHER_API_URL}/weather?lat=${coordinates[0]}&lon=${coordinates[1]}&appId=${WEATHER_API_KEY}&units=metric`
@@ -71,42 +70,41 @@ function App() {
       .then((response) => response.json())
       .then((response) => {
         let forecastArr = [
-          [{name: 'Sunday'}],
-          [{name: 'Monday'}],
-          [{name: 'Tuersday'}],
-          [{name: 'Wednesday'}],
-          [{name: 'Thursday'}],
-          [{name: 'Friday'}],
-          [{name: 'Saturday'}],
+          [{ name: "Sunday" }],
+          [{ name: "Monday" }],
+          [{ name: "Tuersday" }],
+          [{ name: "Wednesday" }],
+          [{ name: "Thursday" }],
+          [{ name: "Friday" }],
+          [{ name: "Saturday" }],
         ];
         for (let i = 0; i < response.list.length; i++) {
           switch (WEEK_DAYS[dayInAWeek(response.list[i].dt_txt)]) {
             case "Sunday":
               forecastArr[0].push(response.list[i]);
-              break
+              break;
             case "Monday":
               forecastArr[1].push(response.list[i]);
-              break
+              break;
             case "Tuersday":
               forecastArr[2].push(response.list[i]);
-              break
+              break;
             case "Wednesday":
               forecastArr[3].push(response.list[i]);
-              break
+              break;
             case "Thursday":
               forecastArr[4].push(response.list[i]);
-              break
+              break;
             case "Friday":
               forecastArr[5].push(response.list[i]);
-              break
+              break;
             case "Saturday":
               forecastArr[6].push(response.list[i]);
-              break
-            default: 
+              break;
+            default:
           }
         }
         setForecast({ data: forecastArr });
-        // console.log(response);
       })
       .catch((err) => console.error(err));
 
