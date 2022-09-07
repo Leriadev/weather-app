@@ -1,5 +1,12 @@
 # Weather app
 
+## Desc:
+  This application is designed to display the current weather and forecast for 5 days of the selected city. Data is taken from the API.
+Local time is displayed at the top of the current weather, followed by weather data. After the current weather, there is a forecast, which is divided into days of the week. There you can find a forecast by time.
+
+![image](https://user-images.githubusercontent.com/94675218/188909056-450b5d0e-aad0-47de-8ce8-b881cc55600f.png)
+
+
 ## Components: 
 
   ### :fallen_leaf: City search
