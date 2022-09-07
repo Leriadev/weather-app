@@ -20,4 +20,9 @@ useState, fetch, react-moment. [OpenWeather API](https://openweathermap.org/curr
 
 
 
-### - Forcecast
+  ### :fallen_leaf: Forcecast
+
+UseState, fetch, react-accessible-accordion, react-items-carousel [OpenWeather API](https://openweathermap.org/forecast)
+
+![image](https://user-images.githubusercontent.com/94675218/188904874-68962853-f93c-429c-8428-2f23c2b6e261.png)
+
